@@ -3,7 +3,7 @@ module github.com/mammuth/hltv-api
 go 1.13
 
 require (
-	github.com/Olament/HLTV-Go v0.1.2
+	github.com/Olament/HLTV-Go v0.1.3-0.20200215173035-445c2e55fec1
 	github.com/gin-gonic/gin v1.5.0
 	github.com/gosimple/slug v1.9.0
 	github.com/jordic/goics v0.0.0-20181215212140-feb996c8e01f

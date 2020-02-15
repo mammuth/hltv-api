@@ -1,4 +1,6 @@
 github.com/Olament/HLTV-Go v0.1.2/go.mod h1:DMpHH9BrX5pp+lRWiKCo7RvmD1J2Im+cDI/s5OsM5Bw=
+github.com/Olament/HLTV-Go v0.1.3-0.20200215173035-445c2e55fec1 h1:ape+bJWp83HUd2EqjC3P3GFzUgu6xmxbyCGM0r3GJiQ=
+github.com/Olament/HLTV-Go v0.1.3-0.20200215173035-445c2e55fec1/go.mod h1:DMpHH9BrX5pp+lRWiKCo7RvmD1J2Im+cDI/s5OsM5Bw=
 github.com/PuerkitoBio/goquery v1.5.0 h1:uGvmFXOA73IKluu/F84Xd1tt/z07GYm8X49XKHP7EJk=
 github.com/PuerkitoBio/goquery v1.5.0/go.mod h1:qD2PgZ9lccMbQlc7eEOjaeRlFQON7xY8kdmcsrnKqMg=
 github.com/andybalholm/cascadia v1.0.0 h1:hOCXnnZ5A+3eVDX8pvgl4kofXv2ELss0bKcqRySc45o=
