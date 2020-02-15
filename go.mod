@@ -2,6 +2,8 @@ module github.com/mammuth/hltv-api
 
 go 1.13
 
+// +heroku goVersion go1.13
+
 require (
 	github.com/Olament/HLTV-Go v0.1.3-0.20200215173035-445c2e55fec1
 	github.com/gin-gonic/gin v1.5.0
