@@ -1,5 +1,5 @@
 # HLTV API (inofficial)
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/mammuth/hltv-api)
 
 ### Features
 - Get ical file for upcoming matches
