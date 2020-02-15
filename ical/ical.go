@@ -2,13 +2,23 @@ package ical
 
 import (
 	"fmt"
+	"strconv"
 	"time"
 
 	"github.com/Olament/HLTV-Go/model"
+	"github.com/gosimple/slug"
 	"github.com/jordic/goics"
-
-	"github.com/mammuth/hltv-api/lib"
 )
+
+func getHltvMatchUrl(m *model.UpcomingMatch) string {
+	return fmt.Sprintf(
+		"https://hltv.org/matches/%s/%s-vs-%s-%s",
+		strconv.Itoa(*m.ID),
+		slug.Make(m.Team1.Name),
+		slug.Make(m.Team2.Name),
+		slug.Make(m.Event.Name),
+	)
+}
 
 func UpcomingMatchesICal(matches []*model.UpcomingMatch) goics.Componenter {
 	c := goics.NewComponent()
@@ -25,7 +35,7 @@ func UpcomingMatchesICal(matches []*model.UpcomingMatch) goics.Componenter {
 		s.AddProperty(k, v)
 
 		s.AddProperty("SUMMARY", fmt.Sprintf("%s vs %s", match.Team1.Name, match.Team2.Name))
-		s.AddProperty("DESCRIPTION", lib.GetHltvMatchUrl(match))
+		s.AddProperty("DESCRIPTION", getHltvMatchUrl(match))
 		c.AddComponent(s)
 	}
 	return c
