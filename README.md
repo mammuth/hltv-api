@@ -9,7 +9,7 @@
 
 
 ### Usage
-- The app is deployed on a free instance of Heroku for testing purposes: https://floating-depths-82026.herokuapp.com/. I encourage you to deploy it on your own, otherwise the free hours will be gone quickly :see_no_evil:
+- The app is deployed on a free instance of Heroku for testing purposes: https://hltv-api-go.herokuapp.com/. I encourage you to deploy it on your own, otherwise the free hours will be gone quickly :see_no_evil:
 - You can compile it with `GOOS=linux GOARCH=amd64 go build -o main main.go` and then manually run it with `./main`
 - You could also use the button above to deploy it to Heroku
 
