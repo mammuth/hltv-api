@@ -1,0 +1,1 @@
+web: bin/hltv-api
