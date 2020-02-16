@@ -1,0 +1,8 @@
+project: mammuth
+function: hltvapi
+environment:
+  name: go
+ignore:
+- .valar.yml
+- .git
+- node_modules
