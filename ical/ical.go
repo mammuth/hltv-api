@@ -10,6 +10,13 @@ import (
 	"github.com/jordic/goics"
 )
 
+func getEventDescription(m *model.UpcomingMatch) string {
+	return fmt.Sprintf("%s \n%s",
+		m.Event.Name,
+		getHltvMatchUrl(m),
+	)
+}
+
 func getHltvMatchUrl(m *model.UpcomingMatch) string {
 	return fmt.Sprintf(
 		"https://hltv.org/matches/%s/%s-vs-%s-%s",
@@ -35,7 +42,7 @@ func UpcomingMatchesICal(matches []*model.UpcomingMatch) goics.Componenter {
 		s.AddProperty(k, v)
 
 		s.AddProperty("SUMMARY", fmt.Sprintf("%s vs %s", match.Team1.Name, match.Team2.Name))
-		s.AddProperty("DESCRIPTION", getHltvMatchUrl(match))
+		s.AddProperty("DESCRIPTION", getEventDescription(match))
 		c.AddComponent(s)
 	}
 	return c

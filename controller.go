@@ -38,6 +38,7 @@ func upcomingMatchesIcal(c *gin.Context) {
 func index(c *gin.Context) {
 	c.HTML(http.StatusOK, "index.html", gin.H{})
 }
+
 func UpcomingMatchesFromRequest(c *gin.Context) (upcomingMatches []*model.UpcomingMatch, err error) {
 	teamIDs := []int{}
 	for _, idString := range c.QueryArray("team") {
