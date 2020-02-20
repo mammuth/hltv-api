@@ -2,8 +2,8 @@
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/mammuth/hltv-api)
 
 ### Features
-- Get ical file for upcoming matches
-- Json API for upcoming matches, filterable by teams
+- Get ical file for upcoming matches (filterable by teams)
+- Json API for upcoming matches
 
 ![image](https://user-images.githubusercontent.com/3121306/74592853-84c90500-5025-11ea-9e88-d5d58f9fd20d.png)
 
