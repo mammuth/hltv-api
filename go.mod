@@ -14,4 +14,5 @@ require (
 	gopkg.in/check.v1 v1.0.0-20180628173108-788fd7840127 // indirect
 )
 
-replace github.com/Olament/HLTV-Go v0.1.3-0.20200215173035-445c2e55fec1 => /home/max/Code/HLTV-Go
+// replace github.com/Olament/HLTV-Go v0.1.3-0.20200215173035-445c2e55fec1 => /home/max/Code/HLTV-Go
+replace github.com/Olament/HLTV-Go v0.1.3-0.20200215173035-445c2e55fec1 => github.com/mammuth/HLTV-Go v0.2.1-upcoming
