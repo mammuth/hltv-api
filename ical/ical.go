@@ -27,6 +27,18 @@ func getHltvMatchUrl(m *model.UpcomingMatch) string {
 	)
 }
 
+func getExpectedMatchDuration(m *model.UpcomingMatch) time.Duration {
+	switch m.Format {
+	case "bo1":
+		return time.Hour
+	case "bo3":
+		return 2*time.Hour + 15*time.Minute
+	case "bo5":
+		return 3*time.Hour + 30*time.Minute
+	}
+	return time.Hour
+}
+
 func UpcomingMatchesICal(matches []*model.UpcomingMatch) goics.Componenter {
 	c := goics.NewComponent()
 	c.SetType("VCALENDAR")
@@ -38,7 +50,8 @@ func UpcomingMatchesICal(matches []*model.UpcomingMatch) goics.Componenter {
 
 		k, v := goics.FormatDateTimeField("DTSTART", match.Date)
 		s.AddProperty(k, v)
-		k, v = goics.FormatDateTimeField("DTEND", match.Date.Add(time.Hour)) // We set the match duration to 1 hour
+
+		k, v = goics.FormatDateTimeField("DTEND", match.Date.Add(getExpectedMatchDuration(match)))
 		s.AddProperty(k, v)
 
 		s.AddProperty("SUMMARY", fmt.Sprintf("%s vs %s", match.Team1.Name, match.Team2.Name))
