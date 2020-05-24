@@ -32,9 +32,9 @@ func getExpectedMatchDuration(m *model.UpcomingMatch) time.Duration {
 	case "bo1":
 		return time.Hour
 	case "bo3":
-		return 2*time.Hour + 15*time.Minute
+		return 3 * time.Hour
 	case "bo5":
-		return 3*time.Hour + 30*time.Minute
+		return 5 * time.Hour
 	}
 	return time.Hour
 }
